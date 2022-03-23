@@ -12,6 +12,20 @@
 .Weather ul {
   list-style: none;
 }
-.Weather form {
-  margin-top: 15px;
+
+.Weather .temperature {
+  font-size: 64px;
+  line-height: 64px;
+}
+img {
+  height: 64px;
+  width: 64px;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.Weather .unit {
+  position: relative;
+  top: -34px;
+  margin-left: 5px;
 }
