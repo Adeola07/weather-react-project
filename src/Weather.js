@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import axios from "axios";
+import FormatDate from "./FormatDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -9,6 +10,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -32,7 +34,7 @@ export default function Weather(props) {
         </form>
         <h1>Sheffield</h1>
 
-        <p>Sun 20.03.22</p>
+        <FormatDate date={weatherData.date} />
         <p className="text-capitalize">{weatherData.description} </p>
         <div className="row">
           <div className="col-6">
@@ -43,17 +45,18 @@ export default function Weather(props) {
                 className="float-left"
               />
               <div className="float-left">
-                <span className="temperature">{weatherData.temperature}</span>
+                <span className="temperature">
+                  {Math.round(weatherData.temperature)}
+                </span>
                 <span className="unit">C</span>
               </div>
             </div>
           </div>
           <div className="col-6">
             <ul>
-              <li>Temperature:{weatherData.temperature}</li>
-              <li>Precipitation :</li>
-              <li>Humidity :{weatherData.humidity}</li>
               <li>Feels like :{Math.round(weatherData.feels_like)}</li>
+              <li>Humidity :{weatherData.humidity}%</li>
+              <li>Wind: {weatherData.wind}km/hr</li>
             </ul>
           </div>
         </div>
