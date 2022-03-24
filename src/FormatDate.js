@@ -4,7 +4,7 @@ export default function FormatDate(props) {
   let days = [
     "Sunday",
     "Monday",
-    "Tuesaday",
+    "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",

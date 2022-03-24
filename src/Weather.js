@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import axios from "axios";
 import FormatDate from "./FormatDate";
+import WeatherDetails from "./WeatherDetails";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,6 +19,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       feels_like: response.data.main.feels_like,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -51,34 +53,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h1>{weatherData.city}</h1>
-
-        <FormatDate date={weatherData.date} />
-        <p className="text-capitalize">{weatherData.description} </p>
-        <div className="row">
-          <div className="col-6">
-            <div className="d-flex">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-                alt="Sunny"
-                className="float-left"
-              />
-              <div className="float-left">
-                <span className="temperature">
-                  {Math.round(weatherData.temperature)}
-                </span>
-                <span className="unit">C</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-6">
-            <ul>
-              <li>Feels like :{Math.round(weatherData.feels_like)}</li>
-              <li>Humidity :{weatherData.humidity}%</li>
-              <li>Wind: {weatherData.wind}km/hr</li>
-            </ul>
-          </div>
-        </div>
+        <WeatherDetails data={weatherData} />
       </div>
     );
   } else {
