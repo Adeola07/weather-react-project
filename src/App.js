@@ -7,7 +7,12 @@ function App() {
     <div className="App">
       <div className="container">
         <Weather defaultCity="Sheffield" />
-        <footer></footer>
+        <footer>
+          <a href="https://github.com/Adeola07/weather-react-project">
+            Open-source code
+          </a>{" "}
+          by Adeola Ejalonibu{" "}
+        </footer>
       </div>
     </div>
   );
