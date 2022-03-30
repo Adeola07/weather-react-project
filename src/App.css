@@ -1,9 +1,11 @@
 .Weather {
-  border: 1px solid black;
+  border: 10px solid rgba(241, 93, 104, 0.6);
+  border-radius: 20px;
   padding: 16px;
   margin: 30px auto;
   border-radius: 4px;
   max-width: 600px;
+  background: #ffb4ac;
 }
 
 .Weather h1 {
@@ -28,4 +30,9 @@
   position: relative;
   top: -34px;
   margin-left: 5px;
+  text-decoration: none;
+}
+
+.Weather form {
+  margin-right: 10px;
 }
