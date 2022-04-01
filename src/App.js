@@ -8,7 +8,7 @@ function App() {
       <div className="container">
         <Weather defaultCity="Sheffield" />
         <footer>
-          <a href="https://github.com/Adeola07/weather-react-project">
+          <a href="https://github.com/Adeola07/weather-react-project  target=_blank">
             Open-source code
           </a>{" "}
           by Adeola Ejalonibu{" "}
