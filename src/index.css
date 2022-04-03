@@ -11,14 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-body .rain {
-  background: url("./images/rain.jpeg") no-repeat center center fixed;
-  background-size: cover;
-}
-
-body .clear {
-  background-image: url("./images/pexels-photo-231009.jpeg") no-repeat center
-    center fixed;
-  background-size: cover;
-}
