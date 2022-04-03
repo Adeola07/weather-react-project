@@ -54,4 +54,7 @@ footer a {
   li {
     display: none;
   }
+  .unit {
+    display: none;
+  }
 }
