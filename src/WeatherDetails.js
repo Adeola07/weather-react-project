@@ -23,8 +23,8 @@ export default function WeatherDetails(props) {
         </div>
         <div className="col-6">
           <ul>
-            <li>Feels like :{Math.round(props.data.feels_like)}</li>
-            <li>Humidity :{props.data.humidity}%</li>
+            <li>Feels like: {Math.round(props.data.feels_like)}°C</li>
+            <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {Math.round(props.data.wind)}km/hr</li>
           </ul>
         </div>

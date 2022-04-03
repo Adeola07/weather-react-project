@@ -38,3 +38,11 @@ footer {
   text-align: center;
   text-decoration: none;
 }
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast .WeatherForecast-min-temp {
+  opacity: 0.6;
+  margin-left: 5px;
+}
