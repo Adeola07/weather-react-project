@@ -46,3 +46,13 @@ footer {
   opacity: 0.6;
   margin-left: 5px;
 }
+
+@media (max-width: 576px) {
+  li {
+    display: none;
+  }
+
+  .unit {
+    display: none;
+  }
+}
